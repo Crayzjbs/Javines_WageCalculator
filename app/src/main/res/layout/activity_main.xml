@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-19dp">
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Insert name please"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <EditText
+        android:id="@+id/TxtHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Rendered Hours"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="196dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="128dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/empType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Select from the options below"
+        app:layout_constraintEnd_toEndOf="@+id/TxtHours"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="@+id/TxtHours"
+        app:layout_constraintTop_toBottomOf="@+id/TxtHours" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="184dp"
+        android:layout_height="207dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/empType"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/empType"
+        app:layout_constraintTop_toBottomOf="@+id/empType">
+
+        <RadioButton
+            android:id="@+id/FulltimeRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Full time"
+            app:layout_constraintEnd_toEndOf="@+id/TxtHours"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/TxtHours"
+            app:layout_constraintTop_toBottomOf="@+id/TxtHours" />
+
+        <RadioButton
+            android:id="@+id/parttimeRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Part-Time"
+            tools:layout_editor_absoluteX="158dp"
+            tools:layout_editor_absoluteY="322dp" />
+
+        <RadioButton
+            android:id="@+id/ProbRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Probationaty"
+            app:layout_constraintEnd_toEndOf="@+id/parttimeRG"
+            app:layout_constraintStart_toStartOf="@+id/parttimeRG"
+            app:layout_constraintTop_toBottomOf="@+id/parttimeRG" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
