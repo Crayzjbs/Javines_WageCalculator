@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("empName",name);
                 intent.putExtra("hours",totalHours);
                 startActivity(intent);
-
         }
     }
 
