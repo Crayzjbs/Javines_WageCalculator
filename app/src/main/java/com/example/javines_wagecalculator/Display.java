@@ -43,6 +43,7 @@ public class Display extends AppCompatActivity implements View.OnClickListener {
         calcWage(EmployeeType,EmployeeHours,txtTotalWage);
 
     }
+
     @SuppressLint("SetTextI18n")
     public void calcWage(String employeeType,Double employeeHours, TextView txtWage) {
         double totalWage = 0.0;
