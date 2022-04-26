@@ -48,6 +48,7 @@ public class Display extends AppCompatActivity implements View.OnClickListener {
     public void calcWage(String employeeType,Double employeeHours, TextView txtWage) {
         double totalWage = 0.0;
 
+
         if (employeeHours > 8.0) {
             if (employeeType.equals("Full-time")) {
                 totalWage = 800 + (115 * (employeeHours - 8.0));
