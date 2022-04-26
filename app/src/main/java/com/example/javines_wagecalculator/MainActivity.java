@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtName =findViewById(R.id.txtName);
         txtHours =findViewById(R.id.txtHours);
         //RG
-        rGroup =findViewById(R.id.rGroup); //employee type
+        rGroup =findViewById(R.id.rGroup);
+
         //Btn
         btnCAL =findViewById(R.id.btnCAL);
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String name = txtName.getText().toString();
                 String totalHours = (txtHours.getText().toString());
 
-                Intent intent = new Intent(this, Display.class);
+                Intent intent = new Intent(this, DisplayFinal.class);
 
                 intent.putExtra("type",type);
                 intent.putExtra("empName",name);

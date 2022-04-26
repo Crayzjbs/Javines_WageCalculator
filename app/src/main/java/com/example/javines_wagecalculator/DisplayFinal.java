@@ -1,5 +1,6 @@
 package com.example.javines_wagecalculator;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,9 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Display extends AppCompatActivity implements View.OnClickListener {
+public class DisplayFinal extends AppCompatActivity implements View.OnClickListener {
 
     TextView txtEmpName,txtEmpType,txtHoursRendered,txtWage;
     Button btnBack;
@@ -19,7 +18,7 @@ public class Display extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_display_final);
 
         txtEmpName = findViewById(R.id.txtEmpName);
         txtEmpType = findViewById(R.id.txtEmpType);
@@ -80,11 +79,13 @@ public class Display extends AppCompatActivity implements View.OnClickListener {
         }
 
     }
-    public void onClick(View v){
+
+    @Override
+    public void onClick(View v) {
         if (v.getId() == R.id.btnback){
-            startActivity(new Intent(Display.this, MainActivity.class));
+            startActivity(new Intent(DisplayFinal.this, MainActivity.class));
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }
-    }
 
+    }
 }
